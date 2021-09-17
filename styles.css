@@ -1,9 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 body {
     margin: 0px;
     max-width: 60%;
     margin: auto;
+    font-family: 'Handlee', cursive;
+    border: 2rem solid;
 }
 
 :root {
@@ -12,17 +14,21 @@ body {
 
 nav {
     background-color: var(--primary-yellow);
-    padding: 3%;
+    padding: 2%;
     
 }
 
 h1 {
     /* https://api.funtranslations.com/translate/minion.json */
     margin-block-start: 0rem;
+    margin-block-end: 0rem;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2.8rem;
 }
 
-img {
-    width: 60%;
+.head-img {
+    width: 45%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -31,4 +37,54 @@ img {
 textarea {
     display: block;
     margin: auto;
+    width: 60%;
+    padding: 3%;
+    margin-bottom: 1.5rem;
+    font-family: 'Handlee', cursive;
+    font-size: 1.5rem;
+}
+
+button {
+    display: block;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    padding: 0.7rem;
+    width: 15%;
+    background-color: var(--primary-yellow);
+    border-color: var(--primary-yellow);
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Handlee', cursive;
+    
+}
+
+footer {
+    background-color: var(--primary-yellow);
+    margin-top: 5%;
+}
+
+.links {
+    display: inline;
+    width:10%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 2%;
+}
+
+.links:hover{
+    opacity: 0.7;
+}
+
+
+div{
+    display: block;
+    margin-left: 38%;
+}
+
+p{
+    padding-top: 1rem;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 1.3rem;
 }
