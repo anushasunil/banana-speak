@@ -2,7 +2,7 @@
 
 body {
     margin: 0px;
-    max-width: 60%;
+    max-width: 44%;
     margin: auto;
     font-family: 'Handlee', cursive;
     border: 2rem solid;
@@ -19,7 +19,6 @@ nav {
 }
 
 h1 {
-    /* https://api.funtranslations.com/translate/minion.json */
     margin-block-start: 0rem;
     margin-block-end: 0rem;
     text-align: center;
