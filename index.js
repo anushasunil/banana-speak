@@ -1,26 +1,29 @@
 var inputText = document.querySelector("#input-box");
 var btnTranslate = document.querySelector("#translate");
-var outputText = document.querySelector("#output-box");var errorMessage = document.querySelector(".error-message")
+var outputText = document.querySelector("#output-box");
+var errorMessage = document.querySelector(".error-message")
 
+var api = "https://api.funtranslations.com/translate/minion.json";
 
-btnTranslate.addEventListener("click", function clickHandler()
-{
-    console.log(inputText.value);
-    // url = "https://api.funtranslations.com/translate/minion.json?text=" + inputText.value;
+function fetchUrl(inputValue) {
+    return api + "?text=" + inputValue;
+}
 
-    url = "https://api.funtranslations.com/translate/shakespeare.json?text=" + inputText.value
-
-    fetch(url)
-    .then((response) =>
-        response.json())
-    .then(function outputTextHandler(json){
-        console.log(json);
-        outputText.innerText = json.contents.translated;
-    })
-    .catch(errorHandling())
-});
-
-function errorHandling(error)
-{
+function errorHandling() {
     errorMessage.innerText = "server frown 😣";
 }
+
+function clickHandler() {
+    let input = inputText.value;
+    console.log(fetchUrl(input))
+    fetch(fetchUrl(input))
+        .then((response) => response.json())
+        .then((json) => {
+            let finalOutput = json.contents.translated;
+            outputText.innerText = finalOutput;
+        })
+        .catch(errorHandling)
+
+}
+
+btnTranslate.addEventListener("click", clickHandler);
