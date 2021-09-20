@@ -48,7 +48,7 @@ button {
     margin: auto;
     margin-bottom: 1.5rem;
     padding: 0.7rem;
-    width: 15%;
+    width: fit-content;
     background-color: var(--primary-yellow);
     border-color: var(--primary-yellow);
     font-weight: bold;
