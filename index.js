@@ -5,15 +5,11 @@ var errorMessage = document.querySelector(".error-message")
 
 var api = "https://api.funtranslations.com/translate/minion.json";
 
-function fetchUrl(inputValue) {
-    return api + "?text=" + inputValue;
-}
+const fetchUrl = (inputValue) => `${api}?text=${inputValue}`;
 
-function errorHandling() {
-    errorMessage.innerText = "server frown 😣";
-}
+const errorHandling = () => { errorMessage.innerText = "server frown 😣";}
 
-function clickHandler() {
+const clickHandler = () => {
     let input = inputText.value;
     console.log(fetchUrl(input))
     fetch(fetchUrl(input))
